@@ -6,7 +6,9 @@ layout: page
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
+      {% if post.excerpt %}
+        <br>&ldquo;{{ post.excerpt }}&hellip;&rdquo;
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
