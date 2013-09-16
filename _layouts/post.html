@@ -19,6 +19,10 @@
       <header>
         <h1>Paulo Ávila</h1>
         <img src="http://www.gravatar.com/avatar/fb5061b088e81a06dbb5df2236f5fabe?s=200" class="profile">
+
+        <h2>{{ page.title }}</h2>
+        <p>&ldquo;{{ page.excerpt }}&hellip;&rdquo;</p>
+        <p>Words: {{ page.content | number_of_words }}</p>
       </header>
 
       <section>
