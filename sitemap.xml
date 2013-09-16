@@ -26,26 +26,4 @@
     {% endif %}
   </url>
   {% endfor %}
-
-  {% for node in site.pages %}
-  <url>
-    <loc>http://{{ site.domain }}{{ node.url }}</loc>
-
-    {% if node.sitemap.lastmod %}
-      <lastmod>{{ node.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-    {% else %}
-      <lastmod>{{ node.date | date_to_xmlschema }}</lastmod>
-    {% endif %}
-
-    {% if node.sitemap.changefreq %}
-      <changefreq>{{ node.sitemap.changefreq }}</changefreq>
-    {% else %}
-      <changefreq>{{ site.sitemap.changefreq }}</changefreq>
-    {% endif %}
-
-    {% if node.sitemap.priority %}
-      <priority>{{ node.sitemap.priority }}</priority>
-    {% endif %}
-  </url>
-  {% endfor %}
 </urlset>
