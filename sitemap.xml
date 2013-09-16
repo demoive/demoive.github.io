@@ -27,7 +27,7 @@
   </url>
   {% endfor %}
 
-  {% for node in site.posts %}
+  {% for node in site.pages %}
   <url>
     <loc>http://{{ site.domain }}{{ node.url }}</loc>
 
