@@ -1,2 +1,4 @@
 
+exclude: ['README.md', 'params.json']
+
 permalink: /:categories/:title
