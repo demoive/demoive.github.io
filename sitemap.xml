@@ -8,7 +8,7 @@
   <url>
     <loc>http://{{ site.domain }}{{ node.url }}</loc>
 
-    {% if node.sitemap and node.sitemap.lastmod %}
+    {% if node.sitemap.lastmod %}
       <lastmod>{{ node.sitemap.lastmod | date_to_xmlschema }}</lastmod>
     {% else %}
       <lastmod>{{ node.date | date_to_xmlschema }}</lastmod>
