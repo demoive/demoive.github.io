@@ -4,9 +4,15 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% for post in site.posts %}
+  {% for node in site.posts %}
   <url>
-    <loc>http://{{ site.domain }}{{ post.url }}</loc>
+    <loc>http://{{ site.domain }}{{ node.url }}</loc>
+
+    {% if node.sitemap and node.sitemap.lastmod %}
+      <lastmod>{{ node.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+    {% else %}
+      <lastmod>{{ node.date | date_to_xmlschema }}</lastmod>
+    {% endif %}
   </url>
   {% endfor %}
 </urlset>
