@@ -10,7 +10,3 @@ domain: demoive.github.io
 
 disqus:
 	shortname: demoive-github
-
-google:
-	analytics:
-		id: UA-2390640-8
