@@ -2,3 +2,6 @@
 exclude: ['README.md', 'params.json']
 
 permalink: /:categories/:title
+
+# Custom variables (available through {% site.KEY %})
+domain: demoive.github.io
