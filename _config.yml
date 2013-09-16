@@ -8,6 +8,10 @@ excerpt_separator: "<!-- more -->"
 # Custom variables (available through {% site.KEY %})
 domain: demoive.github.io
 
+sitemap:
+  changefreq: monthly
+#    archive-threshold-days: 60
+    
 disqus:
   shortname: demoive-github
 

@@ -13,6 +13,16 @@
     {% else %}
       <lastmod>{{ node.date | date_to_xmlschema }}</lastmod>
     {% endif %}
+
+    {% if node.sitemap.changefreq %}
+      <changefreq>{{ node.sitemap.changefreq }}</changefreq>
+    {% else %}
+      <changefreq>{{ site.sitemap.changefreq }}</changefreq>
+    {% endif %}
+
+    {% if node.sitemap.priority %}
+      <priority>{{ node.sitemap.priority }}</priority>
+    {% endif %}
   </url>
   {% endfor %}
 </urlset>
