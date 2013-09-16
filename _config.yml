@@ -7,3 +7,6 @@ excerpt_separator: "<!-- more -->"
 
 # Custom variables (available through {% site.KEY %})
 domain: demoive.github.io
+
+disqus:
+  shortname: demoive-github
