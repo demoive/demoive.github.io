@@ -3,11 +3,11 @@ layout: page
 ---
 
 <ul>
-  {% for post in site.posts %}
+  {% for node in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {% if post.excerpt %}
-        <br>&ldquo;{{ post.excerpt }}&hellip;&rdquo;
+      <a href="{{ node.url }}">{{ node.title }}</a>
+      {% if node.excerpt %}
+        <br>&ldquo;{{ node.excerpt }}&hellip;&rdquo;
       {% endif %}
     </li>
   {% endfor %}
