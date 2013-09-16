@@ -1,2 +1,13 @@
+---
+---
+
 User-agent: *
 Allow: /
+
+{% for node in site.pages %}
+{% if node.layout != null and node.noindex  %}
+Disallow: {{ node.url }}
+{% endif %}
+{% endfor %}
+
+Sitemap: http://{{ site.domain }}/sitemap.xml
