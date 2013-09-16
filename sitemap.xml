@@ -27,7 +27,9 @@
   </url>
   {% endfor %}
 
+
   {% for node in site.pages %}
+  {% if node.layout != null %}
   <url>
     <loc>http://{{ site.domain }}{{ node.url }}</loc>
 
@@ -45,5 +47,6 @@
       <priority>{{ node.sitemap.priority }}</priority>
     {% endif %}
   </url>
+  {% endif %}
   {% endfor %}
 </urlset>
