@@ -1,0 +1,17 @@
+---
+layout: page
+noindex:
+---
+
+<ul>
+  {% for node in site.posts %}
+    <li>
+      <a href="{{ node.url }}">{{ node.title }}</a>
+      {% if node.excerpt %}
+        <br>&ldquo;{{ node.excerpt }}&hellip;&rdquo;
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% gist 4648979 %}
