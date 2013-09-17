@@ -6,7 +6,7 @@
   {% endif %}
 
   {% if include.is_post == true %}
-  {% if node.sitemap.lastmod != null %}
+  {% if node.sitemap.lastmod == null %}
     <lastmod>{{ node.date | date_to_xmlschema }}</lastmod>
   {% endif %}
   {% endif %}
